@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import AuthContext from "../context/AuthContext";
 
-export default function Footer({ isAuth }) {
+export default function Footer() {
   const { theme } = useContext(ThemeContext);
+  const { isAuth } = useContext(AuthContext);
+
   return (
     <footer className={`footer ${theme}`}>
       <hr />

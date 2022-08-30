@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import AuthContext from "../context/AuthContext";
 
-export default function Header({ isAuth, handleAuth }) {
+export default function Header() {
   const { theme, handleChangeTheme } = useContext(ThemeContext);
+  const { isAuth, handleAuth } = useContext(AuthContext);
 
   return (
     <header className={`header ${theme}`}>
