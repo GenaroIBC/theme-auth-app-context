@@ -1,9 +1,9 @@
-export default function Header({
-  isAuth,
-  handleAuth,
-  theme,
-  handleChangeTheme,
-}) {
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
+
+export default function Header({ isAuth, handleAuth }) {
+  const { theme, handleChangeTheme } = useContext(ThemeContext);
+
   return (
     <header className={`header ${theme}`}>
       <nav className="header__nav">
